@@ -1,10 +1,10 @@
-Fmax = 200;
-Mmax = 10;
+Fmax = 10*200;
+Mmax = 10*10;
 Nall = size(y,2);
 Q = eye(6);
 Q(4:6,4:6) = 0;
 R = eye(3)*10^-4;
-Nref = 12;
+Nref = 6;
 [K,S,e] = lqr(sysdeul2,Q,R);
 
 %% Simulate with MPC1
@@ -55,7 +55,7 @@ end
 
 %% Plot stuff
 close all;
-experiment = 'terminal';
+experiment = 'force';
 len1 = size(U4,2);
 hold on;
 plot(Y4(1,2:end),Y4(2,2:end));

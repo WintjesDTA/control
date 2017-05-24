@@ -132,24 +132,160 @@ In the figures below we subsequently plot the trajectories, the input signals an
 \caption{On the left the sates of the simulated trajectory with $K_{lqr1}$ and on the right $K_{lqr2}$ }
 \end{figure}
 
-The cost of the simulation shows that the cost of the second controller is lower, namely 33.1349 versus 34.9471 respectively. The trajectories however look very similair. The fact that the plots are similair can be expected since the entries that were removed in the second controller mostly corresponds with disturbance rejection, and in our simulation there are no disturbances. 
+The cost of the simulation shows that the cost of the second controller is lower, namely 603.06 versus 705.87 respectively. The trajectories however look very similair. The fact that the plots are similair can be expected since the entries that were removed in the second controller mostly corresponds with disturbance rejection, and in our simulation there are no disturbances. 
 
 \section{MPC}
-Another approach we can take is that of the modelpredictive controller. Every timestep we will look ahead and calculate the subjectively "optimal" input to achieve the path closest to our reference states. The trajectory using a prediction horizon of 12 is shown below. 
+Another approach we can take is that of the modelpredictive controller. Every timestep we will look ahead and calculate the subjectively "optimal" input to achieve the path closest to our reference states. 
+
+\subsection{Without state constraints}
+Firstly we ignore the state constraints. The trajectory using a prediction horizon of 12 is shown below. 
 
 \apicture{mpctraj12}{Simulate trajectory and the reference trajectory}
 
-We also plot the control actions and the state variables, the simulation cost for a horizon of 12 is equal to 32.7179:
+We also plot the control actions and the state variables, the simulation cost for a horizon of 12 is equal to 311.47. This is already much better as the second LQR controller defined in the previous section.
 
 \begin{figure}[H]
 \begin{minipage}{.45\textwidth}
-\includegraphics[width = \textwidth]{lqr1input12.jpg}
+\includegraphics[width = \textwidth]{mpcinput12.jpg}
 \end{minipage}
 \begin{minipage}{.45\textwidth}
-\includegraphics[width = \textwidth]{lqr1states12.jpg}
+\includegraphics[width = \textwidth]{mpcstates12.jpg}
 \end{minipage}
 \caption{On the left control actions and on the right the states for an MPC controller with N = 12. }
 \end{figure}
+
+If we time how long the optimization problem takes a every iteration point we get the following graph. The periods where the computation time increases correspond with parts of the trajectory where the reference trajectory cannot be followed. This is as expected, because if it can be followed the solution is simply the reference input/output, if this is not possible another solution has to be find.
+
+\apicture{comptime12.jpg}{Plot of neccesary computation time for the optimazation for every iteration}
+
+We will do the same for a shorter and longer horizon. The found trajectories are the following.
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpctraj6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpctraj24.jpg}
+\end{minipage}
+\caption{Trajectories with MPC for N=6 and N=24}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinput6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinput24.jpg}
+\end{minipage}
+\caption{Inputs of the simulation for an MPC controller with on the left N=6 and right N=24}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptime6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptime24.jpg}
+\end{minipage}
+\caption{Computational time of the optimizations with on the left the timigns for an MPC controller with N=6 and on the rigth N=24}
+\end{figure}
+
+The cost of the trajectory with N=6 equals 569.72, the cost with N=24 equals 280.32. 
+
+\subsection{With state constraints}
+Incorporating state constraints we get a different picture. For a horizon of order 12 we get the following trajectory, input and optimization timings. The cost of the simulation is 749.44.
+
+\apicture{mpctrajssconstr12.jpg}{Plot of the trajectory for N=12 and state constraints}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinputssconstr12.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptimessconstr12.jpg}
+\end{minipage}
+\caption{On the left the input of a state-constrainted mpc-control with N = 12, on the right the timings of the optimization problems at each iteration.}
+\end{figure}
+
+We repeat the experiments for a horizon of N=6 and N=24 and get the following results. We plot the trajectories, inputs and timings of the optimizations. Cost of the MPC-controller with N=6 is 987.66. Cost of the controller with N=24 is 723.73.
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpctrajssconstr6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpctrajssconstr24.jpg}
+\end{minipage}
+\caption{On the left the trajectory of a state-constrainted mpc-control with N = 6, on the right the same plot for N=24.}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinputssconstr6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinputssconstr24.jpg}
+\end{minipage}
+\caption{On the left the input of a state-constrainted mpc-control with N = 6, on the right the same plot for N=24.}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptimessconstr6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptimessconstr24.jpg}
+\end{minipage}
+\caption{On the left the optimization timings of a state-constrainted mpc-control with N = 6, on the right the same plot for N=24.}
+\end{figure}
+
+No infeasibilities were observed, however, for a very short horizon this theoretically could happen. Out of curiosity we investigate and find that this indeed happens for a horizon of 2. The keeper's speed is too high to turn before going out of the penalty area and the controller does not notice it in time. Therefore the controller cannot find a input which adheres to the constraints and the optimization fails. 
+\\\\
+Increasing the maximal force we repeat the simulations. The cost of the trajectory with N=12 is 930.84. Choosing N = 6 we find a cost of 1034.6 and with N=24 we find a cost of 923.73.
+
+\apicture{mpctrajforce12.jpg}{Plot of the trajectory for N=12 and relaxed maximum forces}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinputforce12.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptimeforce12.jpg}
+\end{minipage}
+\caption{On the left the input of a state-constrainted mpc-control with N = 12, on the right the timings of the optimization problems at each iteration. The force constraints were relaxed to ten times their original value}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpctrajforce6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpctrajforce24.jpg}
+\end{minipage}
+\caption{On the left the trajectory of a state-constrainted mpc-control with N = 6, on the right the same plot for N=24. The force constraints were relaxed to ten times their original value}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinputforce6.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{mpcinputforce24.jpg}
+\end{minipage}
+\caption{On the left the input of a state-constrainted mpc-control with N = 6, on the right the same plot for N=24. The force constraints were relaxed to ten times their original value}
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptimeforce24.jpg}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width = \textwidth]{comptimeforce24.jpg}
+\end{minipage}
+\caption{On the left the optimization timings of a state-constrainted mpc-control with N = 6, on the right the same plot for N=24. The force constraints were relaxed to ten times their original value}
+\end{figure}
+
+\subsection{MPC control with terminal cost}
 
 
 

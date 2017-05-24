@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2017.4.28)  24 MAY 2017 17:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2017.4.28)  24 MAY 2017 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -324,45 +324,219 @@ Package pdftex.def Info: lqr2states.jpg used on input line 130.
 <mpctraj12.jpg, id=41, 890.32625pt x 643.40375pt>
 File: mpctraj12.jpg Graphic file (type jpg)
  <use mpctraj12.jpg>
-Package pdftex.def Info: mpctraj12.jpg used on input line 140.
+Package pdftex.def Info: mpctraj12.jpg used on input line 143.
 (pdftex.def)             Requested size: 172.5pt x 124.65327pt.
  [6 <./lqr1input.jpg> <./lqr2input.jpg> <./lqr1states.jpg> <./lqr2states.jpg>]
-<lqr1input12.jpg, id=45, 890.32625pt x 643.40375pt>
-File: lqr1input12.jpg Graphic file (type jpg)
- <use lqr1input12.jpg>
-Package pdftex.def Info: lqr1input12.jpg used on input line 146.
+<mpcinput12.jpg, id=45, 890.32625pt x 643.40375pt>
+File: mpcinput12.jpg Graphic file (type jpg)
+ <use mpcinput12.jpg>
+Package pdftex.def Info: mpcinput12.jpg used on input line 149.
 (pdftex.def)             Requested size: 155.24895pt x 112.185pt.
 
-<lqr1states12.jpg, id=46, 890.32625pt x 643.40375pt>
-File: lqr1states12.jpg Graphic file (type jpg)
- <use lqr1states12.jpg>
-Package pdftex.def Info: lqr1states12.jpg used on input line 149.
+<mpcstates12.jpg, id=46, 890.32625pt x 643.40375pt>
+File: mpcstates12.jpg Graphic file (type jpg)
+ <use mpcstates12.jpg>
+Package pdftex.def Info: mpcstates12.jpg used on input line 152.
 (pdftex.def)             Requested size: 155.24895pt x 112.185pt.
 
-[7 <./mpctraj12.jpg> <./lqr1input12.jpg> <./lqr1states12.jpg>] (./session1.aux)
- ) 
+<comptime12.jpg, id=47, 890.32625pt x 643.40375pt>
+File: comptime12.jpg Graphic file (type jpg)
+ <use comptime12.jpg>
+Package pdftex.def Info: comptime12.jpg used on input line 159.
+(pdftex.def)             Requested size: 172.5pt x 124.65327pt.
+
+[7 <./mpctraj12.jpg> <./mpcinput12.jpg> <./mpcstates12.jpg>]
+<mpctraj6.jpg, id=52, 890.32625pt x 643.40375pt>
+File: mpctraj6.jpg Graphic file (type jpg)
+ <use mpctraj6.jpg>
+Package pdftex.def Info: mpctraj6.jpg used on input line 165.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpctraj24.jpg, id=53, 890.32625pt x 643.40375pt>
+File: mpctraj24.jpg Graphic file (type jpg)
+ <use mpctraj24.jpg>
+Package pdftex.def Info: mpctraj24.jpg used on input line 168.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpcinput6.jpg, id=54, 890.32625pt x 643.40375pt>
+File: mpcinput6.jpg Graphic file (type jpg)
+ <use mpcinput6.jpg>
+Package pdftex.def Info: mpcinput6.jpg used on input line 175.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpcinput24.jpg, id=55, 890.32625pt x 643.40375pt>
+File: mpcinput24.jpg Graphic file (type jpg)
+ <use mpcinput24.jpg>
+Package pdftex.def Info: mpcinput24.jpg used on input line 178.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<comptime6.jpg, id=56, 890.32625pt x 643.40375pt>
+File: comptime6.jpg Graphic file (type jpg)
+ <use comptime6.jpg>
+Package pdftex.def Info: comptime6.jpg used on input line 185.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<comptime24.jpg, id=57, 890.32625pt x 643.40375pt>
+File: comptime24.jpg Graphic file (type jpg)
+ <use comptime24.jpg>
+Package pdftex.def Info: comptime24.jpg used on input line 188.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+[8 <./comptime12.jpg> <./mpctraj6.jpg> <./mpctraj24.jpg> <./mpcinput6.jpg> <./m
+pcinput24.jpg>] <mpctrajssconstr12.jpg, id=61, 890.32625pt x 643.40375pt>
+File: mpctrajssconstr12.jpg Graphic file (type jpg)
+
+<use mpctrajssconstr12.jpg>
+Package pdftex.def Info: mpctrajssconstr12.jpg used on input line 198.
+(pdftex.def)             Requested size: 172.5pt x 124.65327pt.
+
+<mpcinputssconstr12.jpg, id=62, 890.32625pt x 643.40375pt>
+File: mpcinputssconstr12.jpg Graphic file (type jpg)
+
+<use mpcinputssconstr12.jpg>
+Package pdftex.def Info: mpcinputssconstr12.jpg used on input line 202.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<comptimessconstr12.jpg, id=63, 890.32625pt x 643.40375pt>
+File: comptimessconstr12.jpg Graphic file (type jpg)
+
+<use comptimessconstr12.jpg>
+Package pdftex.def Info: comptimessconstr12.jpg used on input line 205.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+ [9 <./comptime6.jpg> <./comptime24.jpg> <./mpctrajssconstr12.jpg>] <mpctrajssc
+onstr6.jpg, id=67, 890.32625pt x 643.40375pt>
+File: mpctrajssconstr6.jpg Graphic file (type jpg)
+
+<use mpctrajssconstr6.jpg>
+Package pdftex.def Info: mpctrajssconstr6.jpg used on input line 214.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpctrajssconstr24.jpg, id=68, 890.32625pt x 643.40375pt>
+File: mpctrajssconstr24.jpg Graphic file (type jpg)
+
+<use mpctrajssconstr24.jpg>
+Package pdftex.def Info: mpctrajssconstr24.jpg used on input line 217.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpcinputssconstr6.jpg, id=69, 878.28125pt x 658.46pt>
+File: mpcinputssconstr6.jpg Graphic file (type jpg)
+
+<use mpcinputssconstr6.jpg>
+Package pdftex.def Info: mpcinputssconstr6.jpg used on input line 224.
+(pdftex.def)             Requested size: 155.24895pt x 116.38766pt.
+
+<mpcinputssconstr24.jpg, id=70, 890.32625pt x 643.40375pt>
+File: mpcinputssconstr24.jpg Graphic file (type jpg)
+
+<use mpcinputssconstr24.jpg>
+Package pdftex.def Info: mpcinputssconstr24.jpg used on input line 227.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<comptimessconstr6.jpg, id=71, 890.32625pt x 643.40375pt>
+File: comptimessconstr6.jpg Graphic file (type jpg)
+
+<use comptimessconstr6.jpg>
+Package pdftex.def Info: comptimessconstr6.jpg used on input line 234.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<comptimessconstr24.jpg, id=72, 890.32625pt x 643.40375pt>
+File: comptimessconstr24.jpg Graphic file (type jpg)
+
+<use comptimessconstr24.jpg>
+Package pdftex.def Info: comptimessconstr24.jpg used on input line 237.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+ [10 <./mpcinputssconstr12.jpg> <./comptimessconstr12.jpg> <./mpctrajssconstr6.
+jpg> <./mpctrajssconstr24.jpg> <./mpcinputssconstr6.jpg> <./mpcinputssconstr24.
+jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 242--245
+
+ []
+
+<mpctrajforce12.jpg, id=76, 890.32625pt x 643.40375pt>
+File: mpctrajforce12.jpg Graphic file (type jpg)
+
+<use mpctrajforce12.jpg>
+Package pdftex.def Info: mpctrajforce12.jpg used on input line 246.
+(pdftex.def)             Requested size: 172.5pt x 124.65327pt.
+
+<mpcinputforce12.jpg, id=77, 890.32625pt x 643.40375pt>
+File: mpcinputforce12.jpg Graphic file (type jpg)
+
+<use mpcinputforce12.jpg>
+Package pdftex.def Info: mpcinputforce12.jpg used on input line 250.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<comptimeforce12.jpg, id=78, 890.32625pt x 643.40375pt>
+File: comptimeforce12.jpg Graphic file (type jpg)
+
+<use comptimeforce12.jpg>
+Package pdftex.def Info: comptimeforce12.jpg used on input line 253.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+ [11 <./comptimessconstr6.jpg> <./comptimessconstr24.jpg> <./mpctrajforce12.jpg
+>]
+<mpctrajforce6.jpg, id=82, 890.32625pt x 643.40375pt>
+File: mpctrajforce6.jpg Graphic file (type jpg)
+ <use mpctrajforce6.jpg>
+Package pdftex.def Info: mpctrajforce6.jpg used on input line 260.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpctrajforce24.jpg, id=83, 890.32625pt x 643.40375pt>
+File: mpctrajforce24.jpg Graphic file (type jpg)
+
+<use mpctrajforce24.jpg>
+Package pdftex.def Info: mpctrajforce24.jpg used on input line 263.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpcinputforce6.jpg, id=84, 890.32625pt x 643.40375pt>
+File: mpcinputforce6.jpg Graphic file (type jpg)
+
+<use mpcinputforce6.jpg>
+Package pdftex.def Info: mpcinputforce6.jpg used on input line 270.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<mpcinputforce24.jpg, id=85, 890.32625pt x 643.40375pt>
+File: mpcinputforce24.jpg Graphic file (type jpg)
+
+<use mpcinputforce24.jpg>
+Package pdftex.def Info: mpcinputforce24.jpg used on input line 273.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+
+<comptimeforce24.jpg, id=86, 890.32625pt x 643.40375pt>
+File: comptimeforce24.jpg Graphic file (type jpg)
+
+<use comptimeforce24.jpg>
+Package pdftex.def Info: comptimeforce24.jpg used on input line 280.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+File: comptimeforce24.jpg Graphic file (type jpg)
+ <use comptimeforce24.jpg>
+Package pdftex.def Info: comptimeforce24.jpg used on input line 283.
+(pdftex.def)             Requested size: 155.24895pt x 112.185pt.
+ [12 <./mpcinputforce12.jpg> <./comptimeforce12.jpg> <./mpctrajforce6.jpg> <./m
+pctrajforce24.jpg> <./mpcinputforce6.jpg> <./mpcinputforce24.jpg>] [13 <./compt
+imeforce24.jpg>]
+(./session1.aux) ) 
 Here is how much of TeX's memory you used:
- 3291 strings out of 495008
- 49342 string characters out of 3180933
+ 3412 strings out of 495008
+ 51963 string characters out of 3180933
  120096 words of memory out of 3000000
- 6441 multiletter control sequences out of 15000+200000
- 8408 words of font info for 31 fonts, out of 3000000 for 9000
+ 6538 multiletter control sequences out of 15000+200000
+ 8715 words of font info for 32 fonts, out of 3000000 for 9000
  54 hyphenation exceptions out of 8191
  38i,15n,38p,538b,308s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb>
-Output written on session1.pdf (7 pages, 723618 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb>
+Output written on session1.pdf (13 pages, 1607566 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

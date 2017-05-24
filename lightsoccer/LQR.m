@@ -1,4 +1,5 @@
 %% LQR
+N = size(y,2);
 C2 = eye(6);
 D2 = zeros(6,3);
 sys2 = ss(A,B,C2,D2);
@@ -10,10 +11,10 @@ Dd2 = sysdeul2.D;
 Q1= eye(6);
 R1 = eye(3) * 10^-4;
 R =  eye(3) * 10^-4;
-K_lqr1 = lqr(sysdrect2,Q1,R1,0);
+K_lqr1 = lqr(sysdeul2,Q1,R1,0);
 Q2 = eye(6);
 Q2(4:6,4:6) = 0;
-K_lqr2 = lqr(sysdrect2,Q2,R1,0);
+K_lqr2 = lqr(sysdeul2,Q2,R1,0);
 Q = eye(6);
 Q(3,3) = 100;
 K_lqr3 = lqr(Ad2,Bd2,Q,R,0);
@@ -117,14 +118,14 @@ plot(0:11,Y2(1,end-1),0:11,xref(1,:))
 
 %% Simulation cost
 cost1 = 0;
-for i = 1:12
+for i = 1:N
     x = Y2(:,i)-xref(:,i);
     u = U2(:,i);
     cost1 = cost1 + x'*Q1*x +  u'*R1*u;
 end
 
 cost2 = 0;
-for i = 1:12
+for i = 1:N
     x = Y3(:,i)-xref(:,i);
     u = U3(:,i);
     cost2 = cost2 + x'*Q2*x +  u'*R1*u;
